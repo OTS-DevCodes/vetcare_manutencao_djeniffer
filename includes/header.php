@@ -15,13 +15,13 @@ $titulo = $titulo ?? 'VetCare';
   <a class="brand" href="/vetcare_manutencao_djeniffer/index.php">🐾 VetCare</a>
   <nav>
     <?php if (!empty($_SESSION['usuario_id'])): ?>
-      <a href= "/vetcare_manutencao_djenifferindex.php">Painel</a>
+      <a href= "/vetcare_manutencao_djeniffer/index.php">Painel</a>
       <a href="/vetcare_manutencao_djeniffer/tutores/index.php">Tutores</a>
       <a href="/vetcare_manutencao_djeniffer/animais/index.php">Animais</a>
       <a href="/vetcare_manutencao_djeniffer/consultas/index.php">Consultas</a>
       <a href="/vetcare_manutencao_djeniffer/chamados/index.php">Suporte</a>
       <a href="/vetcare_manutencao_djeniffer/logout.php">Sair</a>
-      
+
     <?php endif; ?>
   </nav>
 </header>
