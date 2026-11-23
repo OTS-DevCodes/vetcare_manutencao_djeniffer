@@ -28,7 +28,7 @@ CREATE TABLE tutores (
 );
 
 CREATE TABLE animais (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  animal_id INT AUTO_INCREMENT PRIMARY KEY,
   tutor_id INT NOT NULL,
   nome VARCHAR(100) NOT NULL,
   especie VARCHAR(60),
