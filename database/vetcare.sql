@@ -90,6 +90,22 @@ CREATE TABLE chamados (
   atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+INSERT INTO chamados
+  (titulo, modulo, solicitante, equipe, descricao, passos, resultado_esperado, resultado_obtido, severidade, prioridade, status, responsavel)
+VALUES
+(
+  'BANCO CONECTADO COM NOME ERRADO',
+  'Banco de Dados',
+  'Otto',
+  'DSM2 3 SERIE',
+  'QUANDO TENTO ACESSAR O SISTEMA, A CONEXÃO COM O BANCO FALHA. O PHP USA O BANCO `vetcare`, MAS O SQL CRIA `vetcare_djeniffer` (database.php E vetcare.sql).',
+  '1- IMPORTO O ARQUIVO vetcare.sql\n2- ABRO O SISTEMA NO NAVEGADOR\n3- ENTRO EM QUALQUER TELA QUE USE O BANCO',
+  'SISTEMA CONECTA NO BANCO E CARREGA OS DADOS NORMALMENTE',
+  'SISTEMA APRESENTA FALHA NA CONEXÃO, POIS O NOME DO BANCO NO PHP É DIFERENTE DO CRIADO NO SQL',
+  'Alta', 'Alta', 'Aberto', NULL
+),
+
+
 CREATE TABLE historico_chamados (
   id INT AUTO_INCREMENT PRIMARY KEY,
   chamado_id INT NOT NULL,
